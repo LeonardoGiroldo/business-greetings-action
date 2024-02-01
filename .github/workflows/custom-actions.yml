@@ -19,6 +19,12 @@ jobs:
       with:
         node-version: latest
 
+    - name: Install ncc
+      run: npm install -g @vercel/ncc
+  
+    - name: Build the action
+      run: ncc build index.js -o dist
+
     - name: run npm install
       run: npm install
 
