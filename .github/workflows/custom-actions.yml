@@ -23,7 +23,7 @@ jobs:
       run: npm install -g @vercel/ncc
   
     - name: Build the action
-      run: ncc build index.js -o dist
+      run: ncc build dist/index.js -o dist
 
     - name: run npm install
       run: npm install
